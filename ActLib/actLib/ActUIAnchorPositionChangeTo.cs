@@ -9,7 +9,6 @@ namespace ActLib
         public ActUIAnchorPositionChangeTo(float duration, Vector2 position)
         {
             _duration = duration;
-            Debug.Log("PP " + position);
             _endPosition = position;
         }
 
@@ -26,11 +25,9 @@ namespace ActLib
         {
             float elapsedTime = 0;
             Vector2 startingPos = _trans.anchoredPosition;
-            Debug.Log("name  " + _trans.name + "hih " + startingPos + " end " + _endPosition);
 
             while (elapsedTime < _duration)
             {
-                Debug.Log("inini " + elapsedTime);
                 _trans.anchoredPosition= Vector2.Lerp(startingPos, _endPosition, (elapsedTime / _duration));
                 elapsedTime += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
