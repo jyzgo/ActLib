@@ -11,7 +11,7 @@ public class TestActionMgr : MonoBehaviour
     void Start()
     {
         sp1.PlayAct(new ActSeqences(new ActMoveToLocal(3, new Vector3(1, 1, 2)), new ActMoveToLocal(3,Vector3.zero)));
-        sp1.StopPlayAllActs();
+        //sp1.StopPlayAllActs();
         sp2.PlayAct(new ActSeqences(new ActMoveToLocal(3, new Vector3(1, 1, 2)), new ActMoveToLocal(3, Vector3.zero)));
     }
 
